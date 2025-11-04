@@ -21,9 +21,9 @@ typedef struct {
 	int16_t acc_y;
 	int16_t acc_z;
 	#elif IMU_ACCELEROMETER_LOGICAL_BITS == 32
-	int16_t acc_x;
-	int16_t acc_y;
-	int16_t acc_z;
+	int32_t acc_x;
+	int32_t acc_y;
+	int32_t acc_z;
 	#endif
 	#endif
 	
@@ -37,9 +37,9 @@ typedef struct {
 	int16_t gyro_y;
 	int16_t gyro_z;
 	#elif IMU_GYROSCOPE_LOGICAL_BITS == 32
-	int16_t gyro_x;
-	int16_t gyro_y;
-	int16_t gyro_z;
+	int32_t gyro_x;
+	int32_t gyro_y;
+	int32_t gyro_z;
 	#endif
 	#endif
 	
