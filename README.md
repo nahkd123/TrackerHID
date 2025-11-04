@@ -25,7 +25,7 @@ struct {
     int16_t gyro_x;
     int16_t gyro_y;
     int16_t gyro_z;
-    uint32_t clock_abs; // Report timestamp, wraps back to 0 after 0xFFFFFF with timestep of 39ms
+    uint32_t clock_abs; // Report timestamp, wraps back to 0 after 0xFFFFFF with timestep of 39us
     uint32_t clock_delta; // Delta between previous and current report timestamp
 };
 ```
