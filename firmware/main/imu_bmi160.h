@@ -1,3 +1,8 @@
+/*
+ * Bosch BMI160
+ * Datasheet: https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmi160-ds000.pdf
+ */
+
 #ifndef _IMU_BMI160_H_
 #define _IMU_BMI160_H_
 
