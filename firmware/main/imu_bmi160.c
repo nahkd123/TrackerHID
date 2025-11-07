@@ -112,7 +112,7 @@ esp_err_t imu_poll(imu_data_t* data) {
 	data->clock_abs = bmi160_data.sensortime;
 	data->clock_delta = bmi160_data.sensortime > bmi160_last_sensortime
 		? bmi160_data.sensortime - bmi160_last_sensortime
-		: 0xFFFFFF - bmi160_last_sensortime + bmi160_data.sensortime;
+		: 0xFFFFFF - bmi160_last_sensortime + bmi160_data.sensortime + 1;
 	bmi160_last_sensortime = bmi160_data.sensortime;
 	#endif
 	
