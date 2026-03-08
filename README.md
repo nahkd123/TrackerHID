@@ -72,3 +72,26 @@ report.
 Report ID `0x80` is for gyroscope mouse when user pressed the BOOT button to
 switch mode, but you probably don't need it in your apps anyways (and you can't
 access it on Windows without Zadig either).
+
+## Troubleshooting
+
+### Linux: Permission denied
+
+If you can't open HID device as regular user, you must add a new udev rule to
+allow accessing the device:
+
+```
+KERNEL=="hidraw*", ATTRS{idVendor}=="VID HERE", ATTRS{idProduct}=="PID HERE", TAG+="uaccess"
+```
+
+After that, use `udevadm` to reload the rules and detect already connected
+devices:
+
+```
+udevadm control --reload-rules
+udevadm trigger
+```
+
+If you done all of the above but still couldn't access the device, try logging to
+new session or rebooting your computer. I have to reboot my computer just for the
+rules to work and I don't know why.
